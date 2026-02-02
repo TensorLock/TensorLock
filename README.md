@@ -1,4 +1,4 @@
-# $TensorLock$ : Recovering Model Dependency for Model Supply Chain
+# TensorLock : Recovering Model Dependency for Model Supply Chain
 
 <img src="figs/approach.png" alt="approach" width="1500" />
 
@@ -145,8 +145,8 @@ We conducted an ablation study to evaluate the contribution of each key componen
 | --- | :---: | :---: | :---: | :---: |:---: |
 | $w/W_{FFN}$ (Δ) | -0.21 | -0.07 | -0.18 | -0.13 | -0.27|
 | $w/ W_{MSA}$ \& $W_{FFN}$ (Δ)| -0.05 | -0.04 | -0.14 | -0.10 |  -0.18|
-| $w/o$ $ Ku. $ (Δ)| $\pm 0$ | -0.07 | -0.09 | -0.08 | -0.03|
-| $w/o$ $ D.F. $ (Δ)| $\pm 0$ | -0.17 | -0.19 | -0.18 | -0.28|
+| $w/o$ $Ku.$ (Δ)| $\pm 0$ | -0.07 | -0.09 | -0.08 | -0.03|
+| $w/o$ $D.F.$ (Δ)| $\pm 0$ | -0.17 | -0.19 | -0.18 | -0.28|
 | **$TensorLock$** | **0.96** | **0.81** | **0.75** | **0.78** | **0.77**|
 
 </div>
