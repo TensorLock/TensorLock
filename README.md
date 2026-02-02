@@ -19,8 +19,8 @@ $TensorLock$ is a comprehensive framework designed to recover dependency relatio
 
 1. **Clone the repository**:
 ```bash
-git clone https://github.com/$TensorLock$/$TensorLock$.git
-cd $TensorLock$
+git clone https://github.com/TensorLock/TensorLock.git
+cd TensorLock
 ```
 
 
@@ -53,7 +53,7 @@ python main.py --start-from 5
 
 ## Empirical Study
 
-We conducted an empirical study on the top 10,000 most downloaded models on Hugging Face to understand dependency prevalence and opacity.
+We conducted an empirical study on the 369 models sampled from the top 10,000 most downloaded models on Hugging Face to understand dependency prevalence and opacity. Raw Data Available in [empirical.csv](./empirical/empirical.csv).
 
 * **RQ1: Dependency Prevalence & Opacity**: Model reuse is pervasive (81.8%), yet **53.6% of identified dependencies were absent from model cards**, leading to significant supply chain risks.
 
@@ -100,7 +100,7 @@ In Phase-1, we evaluated $TensorLock$'s ability of clustering by comparing it wi
 | $REEF$              | 0.29                | White      | [REEF: Representation Encoding Fingerprints for Large Language Models](https://arxiv.org/abs/2410.14273) |
 | $MoTHer$            | 0.50                | White      | [UNSUPERVISED MODEL TREE HERITAGE RECOVERY](https://arxiv.org/pdf/2405.18432) |
 | $TensorGuard$       | 0.31                | White      | [Gradient-Based Model Fingerprinting for LLM Similarity Detection and Family Classification](https://arxiv.org/abs/2506.01631) |
-| **$TensorLock$ (Ours)** | **0.96**         | White      | [This Repo](https://github.com/$TensorLock$/$TensorLock$)          | 
+| **$TensorLock (Ours)$** | **0.96**         | White      | [This Repo](https://github.com/TensorLock/TensorLock)          | 
 
 </div>
 
@@ -125,8 +125,8 @@ This evaluation focuses on the precision, recall, and **Dependency F1 (DF1)** sc
 | **$MoTHer^+$** | 0.29 | 0.26 | 0.28 |0.47| [Link](https://github.com/eliahuhorwitz/$MoTHer$) |
 | **$ChronChain$** | 0.13 | 0.13 | 0.13 | 0.97 |[Link](./chron/recovery.py)|
 | **$ChronChain^+$** | 0.29 | 0.27 | 0.28 | 0.97 |[Link](./chron/recovery.py)|
-| **$TensorLock$ (Ours)** | 0.81 | 0.75 | 0.78 | 0.77 |[Link](./main.py)|
-| **$TensorLock^+$ (Ours)** | **0.83** | **0.81** | **0.82** | **0.81** |[Link](./main.py)|
+| **$TensorLock(Ours)$** | 0.81 | 0.75 | 0.78 | 0.77 |[Link](./main.py)|
+| **$TensorLock^+ (Ours)$** | **0.83** | **0.81** | **0.82** | **0.81** |[Link](./main.py)|
 </div>
 
 > **$TensorLock^+$** (our method with previous knowledge) achieves the highest performance, outperforming the tree-based $MoTHer^+$ by **193%** in DF1 score.
@@ -144,10 +144,10 @@ We conducted an ablation study to evaluate the contribution of each key componen
 | Configuration | ARI | Precision | Recall | **DF1** | Reachability | 
 | --- | :---: | :---: | :---: | :---: |:---: |
 | $w/W_{FFN}$ (Δ) | -0.21 | -0.07 | -0.18 | -0.13 | -0.27|
-| $w/ W_{MSA} \& W_{FFN} $ (Δ)| -0.05 | -0.04 | -0.14 | -0.10 |  -0.18|
+| $w/ W_{MSA}$ \& $W_{FFN}$ (Δ)| -0.05 | -0.04 | -0.14 | -0.10 |  -0.18|
 | $w/o$ $ Ku. $ (Δ)| $\pm 0$ | -0.07 | -0.09 | -0.08 | -0.03|
 | $w/o$ $ D.F. $ (Δ)| $\pm 0$ | -0.17 | -0.19 | -0.18 | -0.28|
-| **$TensorLock$** | **0.96** | **0.81** | **0.75** | **0.78** | 0.77|
+| **$TensorLock$** | **0.96** | **0.81** | **0.75** | **0.78** | **0.77**|
 
 </div>
 
