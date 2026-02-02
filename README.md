@@ -184,7 +184,7 @@ We conducted an ablation study to evaluate the contribution of each key componen
 | :---: | :---: | :---: | :---: |
 | **$TensorGuard$** | 25,350s |-  |  25,350s |
 | **$MoTHer$** | 1,052s | 1,041s | 2,093s |
-| **$TensorLock$ (Ours)** |  **963s** | **1,659s** | **2,622s** |
+| **$TensorLock(Ours)$** |  **963s** | **1,659s** | **2,622s** |
 
 </div>
 
