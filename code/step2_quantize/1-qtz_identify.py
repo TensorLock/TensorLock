@@ -8,7 +8,7 @@ import pandas as pd
 from safetensors.torch import load_file as safe_load_file
 from sklearn.metrics import normalized_mutual_info_score
 
-BASE_MODEL_DIR = "../../dataset/models/"
+BASE_MODEL_DIR = "../../evaluation/Benchmark/models/"
 CONVERTED_GGUF_DIR = "../step1_cluster/converted/"
 CLUSTERS_JSON_PATH = "../step1_cluster/clusters.json"
 QUANTIZED_CSV_PATH = "../step1_cluster/quantized_models.csv"

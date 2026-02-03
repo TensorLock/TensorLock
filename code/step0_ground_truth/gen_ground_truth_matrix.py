@@ -1,6 +1,6 @@
 import pandas as pd
 
-INPUT_CSV = f"../../dataset/model_relation.csv"
+INPUT_CSV = f"../../evaluation/Benchmark/model_relation.csv"
 OUTPUT_CSV = f"ground_truth_matrix.csv"
 
 def main():

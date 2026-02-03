@@ -4,7 +4,7 @@ import numpy as np
 from sklearn.metrics import adjusted_rand_score
 
 PRED_PATH = "../step1_cluster/clusters.json"
-GT_PATH = "../../dataset/cluster.json"
+GT_PATH = "../../evaluation/Benchmark/cluster.json"
 
 def evaluate_clustering_ari():
     if not os.path.exists(PRED_PATH) or not os.path.exists(GT_PATH):

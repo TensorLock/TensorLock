@@ -4,7 +4,7 @@ from gguf import GGUFReader
 import numpy as np
 from transformers import AutoConfig, AutoModelForCausalLM, AutoModelForSeq2SeqLM, AutoModel
 
-MODEL_BASE_DIR = "../../../dataset/models"
+MODEL_BASE_DIR = "../../../evaluation/Benchmark/models"
 
 
 def get_safe_path(model_id_or_path):

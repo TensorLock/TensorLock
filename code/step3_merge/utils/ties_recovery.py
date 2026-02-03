@@ -5,7 +5,7 @@ from transformers import AutoModelForCausalLM
 from tqdm import tqdm
 
 
-MODEL_BASE_DIR = "../../../dataset/models"
+MODEL_BASE_DIR = "../../../evaluation/Benchmark/models"
 
 
 def load_any_model(model_path):

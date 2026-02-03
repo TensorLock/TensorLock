@@ -5,14 +5,11 @@
 $TensorLock$ is a comprehensive framework designed to recover dependency relationships among transformer-based models in the model supply chain. By analyzing model weights, metadata, and structural properties, $TensorLock$ constructs a **Type-Aware Model Dependency Graph (MDG)** that reveals how models are derived from others (e.g., via fine-tuning, quantization, merging), even when such information is missing or incorrect in model cards.
 
 ## Project Structure
-
-* `main.py`: Entry point for running the complete $TensorLock$ pipeline.
 * `code/`: Core implementation of $TensorLock$.
-* `dataset/`: Model list and cluster of $MDGBench$.
-* `empirical/`: Empirical data and analysis results.
-* `chron/`: Implementation of chronology-based dependency identification.
-* `usefulness/`: Data of 289 isolated models.
+* `evaluation/`: Benchmark , Baseline and results of rq4-8.
+* `empirical_study/`: Empirical data and analysis results.
 * `figs/`: Figures.
+* `main.py`: Entry point for running the complete $TensorLock$ pipeline.
 * `requirements.txt`: Project dependencies.
 
 ## Installation
@@ -53,7 +50,7 @@ python main.py --start-from 5
 
 ## Empirical Study
 
-We conducted an empirical study on the 369 models sampled from the top 10,000 most downloaded models on Hugging Face to understand dependency prevalence and opacity. Raw Data Available in [empirical.csv](./empirical/empirical.csv).
+We conducted an empirical study on the 369 models sampled from the top 10,000 most downloaded models on Hugging Face to understand dependency prevalence and opacity. Raw Data Available in [empirical.csv](./empirical_study/empirical_data.csv).
 
 * **RQ1: Dependency Prevalence & Opacity**: Model reuse is pervasive (81.8%), yet **53.6% of identified dependencies were absent from model cards**, leading to significant supply chain risks.
 
@@ -83,7 +80,7 @@ We conducted an empirical study on the 369 models sampled from the top 10,000 mo
 We evaluated $TensorLock$ on **$MDGBench$**, a comprehensive benchmark featuring 137 real-world models and 131 dependency edges across multiple domains.
 
 ### 1. Phase-1: Clustering Effectiveness (RQ4)
-In Phase-1, we evaluated $TensorLock$'s ability of clustering by comparing it with both white-box and black-box state-of-the-art fingerprinting methods on the $MDGBench$ dataset. 
+In Phase-1, we evaluated $TensorLock$'s ability of clustering by comparing it with both white-box and black-box state-of-the-art fingerprinting methods on the $MDGBench$. 
 
 <div align="center">
 
@@ -100,7 +97,7 @@ In Phase-1, we evaluated $TensorLock$'s ability of clustering by comparing it wi
 | $REEF$              | 0.29                | White      | [REEF: Representation Encoding Fingerprints for Large Language Models](https://arxiv.org/abs/2410.14273) |
 | $MoTHer$            | 0.50                | White      | [UNSUPERVISED MODEL TREE HERITAGE RECOVERY](https://arxiv.org/pdf/2405.18432) |
 | $TensorGuard$       | 0.31                | White      | [Gradient-Based Model Fingerprinting for LLM Similarity Detection and Family Classification](https://arxiv.org/abs/2506.01631) |
-| **$TensorLock (Ours)$** | **0.96**         | White      | [This Repo](https://github.com/TensorLock/TensorLock)          | 
+| **$TensorLock (Ours)$** | **0.96**         | White      | [TensorLock : Recovering Model Dependency for Model Supply Chain](https://github.com/TensorLock/TensorLock)          | 
 
 </div>
 
@@ -121,10 +118,10 @@ This evaluation focuses on the precision, recall, and **Dependency F1 (DF1)** sc
 
 | Method | Precision | Recall | DF1 | Reachability | Code |
 | :---: | :---: | :---: | :---: | :---: |--- |
-| **$MoTHer$** | 0.04 | 0.04 | 0.04 |0.05| [Link](https://github.com/eliahuhorwitz/$MoTHer$) |
-| **$MoTHer^+$** | 0.29 | 0.26 | 0.28 |0.47| [Link](https://github.com/eliahuhorwitz/$MoTHer$) |
-| **$ChronChain$** | 0.13 | 0.13 | 0.13 | 0.97 |[Link](./chron/recovery.py)|
-| **$ChronChain^+$** | 0.29 | 0.27 | 0.28 | 0.97 |[Link](./chron/recovery.py)|
+| **$MoTHer$** | 0.04 | 0.04 | 0.04 |0.05| [Link](https://github.com/eliahuhorwitz/MoTHer) |
+| **$MoTHer^+$** | 0.29 | 0.26 | 0.28 |0.47| [Link](https://github.com/eliahuhorwitz/MoTHer) |
+| **$ChronChain$** | 0.13 | 0.13 | 0.13 | 0.97 |[Link](./evaluation/Baseline/ChronChain/recovery.py)|
+| **$ChronChain^+$** | 0.29 | 0.27 | 0.28 | 0.97 |[Link](./evaluation/Baseline/ChronChain/recovery.py)|
 | **$TensorLock(Ours)$** | 0.81 | 0.75 | 0.78 | 0.77 |[Link](./main.py)|
 | **$TensorLock^+ (Ours)$** | **0.83** | **0.81** | **0.82** | **0.81** |[Link](./main.py)|
 </div>
@@ -155,6 +152,8 @@ We conducted an ablation study to evaluate the contribution of each key componen
 ---
 
 ### 4. Sensitivity Analysis (RQ6)
+Raw Data Available in [t_conn_sensitivity.csv](./evaluation//RQ6_sensitivity/t_conn_sensitivity.csv), [t_B_sensitivity.csv](./evaluation//RQ6_sensitivity/t_B_sensitivity.csv) and [t_mg_sensitivity.csv](./evaluation//RQ6_sensitivity/t_mg_sensitivity.csv)
+
 
 <table align="center">
   <tr>
@@ -176,6 +175,7 @@ We conducted an ablation study to evaluate the contribution of each key componen
 
 ### 5. Efficiency Evaluation (RQ7)
 
+
 <div align="center">
 
 **Table 5: Efficiency Evaluation on $MDGBench$**
@@ -194,7 +194,7 @@ We conducted an ablation study to evaluate the contribution of each key componen
 
 ### 6. Usefulness  (RQ8)
 
-We applied $TensorLock$ to 289 isolated models  (those lacking dependency metadata) on Hugging Face.  Raw Data Available in [usefulness.csv](./usefulness/usefulness.csv).
+We applied $TensorLock$ to 289 isolated models  (those lacking dependency metadata) on Hugging Face.  Raw Data Available in [usefulness.csv](./evaluation/RQ8_usefulness/usefulness.csv).
 
 > * Identified missing dependencies for **189 (65%)** of these models.
 > * To date, **42 model authors** have confirmed our findings and updated their model cards accordingly.

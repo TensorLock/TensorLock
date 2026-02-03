@@ -6,8 +6,8 @@ import numpy as np
 from tqdm import tqdm
 from utils.load_model import load_any_model
 
-MODEL_BASE_DIR = "../../dataset/models"
-INPUT_JSON = "../../dataset/model_list.json"
+MODEL_BASE_DIR = "../../evaluation/Benchmark/models"
+INPUT_JSON = "../../evaluation/Benchmark/model_list.json"
 CACHE_CSV = "./entropy_cache.csv"
 
 def load_existing_cache(cache_csv):

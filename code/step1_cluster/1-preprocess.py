@@ -5,8 +5,8 @@ import torch
 from safetensors.torch import load_file as safe_load_file
 import onnx
 
-BASE_MODEL_DIR = "../../dataset/models"
-INPUT_JSON_FILE = "../../dataset/model_list.json"
+BASE_MODEL_DIR = "../../evaluation/Benchmark/models"
+INPUT_JSON_FILE = "../../evaluation/Benchmark/model_list.json"
 OUTPUT_CSV_FILE = "./quantized_models.csv"
 
 class QuantizationDetector:

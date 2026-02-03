@@ -12,7 +12,7 @@ import networkx as nx
 
 
 FINGERPRINT_CACHE_PATH = "./fingerprint/"
-INPUT_JSON_FILE = "../../dataset/model_list.json"
+INPUT_JSON_FILE = "../../evaluation/Benchmark/model_list.json"
 CLUSTERS_OUTPUT_JSON = "./clusters.json"
 
 SIMILARITY_THRESHOLD = 0.6

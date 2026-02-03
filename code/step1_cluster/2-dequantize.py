@@ -10,7 +10,7 @@ import numpy as np
 from transformers import GenerationConfig, activations
 
 INPUT_CSV = "./quantized_models.csv"
-SOURCE_ROOT = "../../dataset/models"
+SOURCE_ROOT = "../../evaluation/Benchmark/models"
 DEST_ROOT = "./converted"
 
 

@@ -3,7 +3,7 @@ import json
 import numpy as np
 from collections import deque
 
-GT_CLUSTER_PATH = "../../dataset/cluster.json"
+GT_CLUSTER_PATH = "../../evaluation/Benchmark/cluster.json"
 GT_MATRIX_PATH = "../step0_ground_truth/ground_truth_matrix.csv"
 PRED_MATRIX_OUT = "../step5_finetune/final_result.csv"
 

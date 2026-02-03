@@ -2,12 +2,12 @@ import os
 import torch
 from transformers import AutoConfig, AutoModelForCausalLM, AutoModelForSeq2SeqLM, AutoModel
 
-def get_safe_path(model_name, base_dir="../../dataset/models"):
+def get_safe_path(model_name, base_dir="../../evaluation/Benchmark/models"):
     safe_name = model_name.replace("/", "_")
     return os.path.join(base_dir, safe_name)
 
 def load_any_model(model_name):
-    MODEL_BASE_DIR = "../../../dataset/models"
+    MODEL_BASE_DIR = "../../../evaluation/Benchmark/models"
     DEQUANT_BASE_DIR = "../../step1_cluster/converted"
 
     model_path = get_safe_path(model_name, MODEL_BASE_DIR)

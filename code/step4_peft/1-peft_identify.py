@@ -4,7 +4,7 @@ import json
 import pandas as pd
 from utils.load_model import load_any_model
 
-MODEL_BASE_DIR = "../../dataset/models"
+MODEL_BASE_DIR = "../../evaluation/Benchmark/models"
 CLUSTERS_JSON = "../step1_cluster/clusters.json"
 MERGE_CSV = "../step3_merge/merge_result.csv"
 OUTPUT_CSV = "./peft_result.csv"

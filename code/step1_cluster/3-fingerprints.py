@@ -13,11 +13,11 @@ from transformers import activations
 
 activations.PytorchGELUTanh = activations.GELUTanh
 
-MODEL_BASE_PATH = "../../dataset/models/"
+MODEL_BASE_PATH = "../../evaluation/Benchmark/models/"
 DEQUANTIZED_MODEL_PATH = "./converted/"
 FINGERPRINT_CACHE_PATH = "./fingerprint/"
 QUANTIZED_MODELS_CSV = "./quantized_models.csv"
-INPUT_JSON_FILE = "../../dataset/model_list.json"
+INPUT_JSON_FILE = "../../evaluation/Benchmark/model_list.json"
 
 LOGGING_CONFIG = {
     "level": "INFO",

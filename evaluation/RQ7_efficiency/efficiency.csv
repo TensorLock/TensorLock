@@ -1,0 +1,4 @@
+Method,Clustering,Dependency Identification,Total Time
+TensorGuard,25350s,-,25350s
+MoTHer,1052s,1041s,2093s
+TensorLock(Ours),963s,1659s,2622s

@@ -9,7 +9,7 @@ from utils.load_model import load_any_model, get_safe_path
 from utils.ties_recovery import ties_recovery
 from utils.moe_recovery import moe_recovery
 
-MODEL_BASE_DIR = "../../dataset/model"
+MODEL_BASE_DIR = "../../evaluation/Benchmark/model"
 CLUSTERS_JSON = "../step1_cluster/clusters.json"
 INPUT_CSV = "../step2_quantize/quantize_result.csv"
 OUTPUT_CSV = "./merge_result.csv"

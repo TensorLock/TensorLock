@@ -3,8 +3,8 @@ import pandas as pd
 import numpy as np
 from tqdm import tqdm
 
-MODEL_LIST_PATH = "../dataset/model_list.json"
-GROUND_TRUTH_PATH = "../dataset/cluster.json"
+MODEL_LIST_PATH = "../../Benchmark/model_list.json"
+GROUND_TRUTH_PATH = "../../Benchmark/cluster.json"
 CREATED_AT_CSV = "./model_created_at.csv"
 OUTPUT_MATRIX_CSV = "./chron_result.csv"
 

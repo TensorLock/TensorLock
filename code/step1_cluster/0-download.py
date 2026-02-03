@@ -3,8 +3,8 @@ import json
 from huggingface_hub import snapshot_download
 from tqdm import tqdm
 
-MODEL_LIST_JSON = "../../dataset/model_list.json" 
-local_dir = "../../dataset/models"
+MODEL_LIST_JSON = "../../evaluation/Benchmark/model_list.json" 
+local_dir = "../../evaluation/Benchmark/models"
 
 os.makedirs(local_dir, exist_ok=True)
 
