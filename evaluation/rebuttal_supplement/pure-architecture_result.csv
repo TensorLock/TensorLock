@@ -1,0 +1,6 @@
+Method,ARI
+Architecture field,0.3117
+Layer count,0.4165
+Per-layer dimension,0.3623
+Layer count + Per-layer dimension + Architecture,0.3785
+Our Method (TensorLock),0.9596

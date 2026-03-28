@@ -4,6 +4,8 @@
 
 $TensorLock$ is a comprehensive framework designed to recover dependency relationships among transformer-based models in the model supply chain. By analyzing model weights, metadata, and structural properties, $TensorLock$ constructs a **Type-Aware Model Dependency Graph (MDG)** that reveals how models are derived from others (e.g., via fine-tuning, quantization, merging), even when such information is missing or incorrect in model cards.
 
+![NEW](https://img.shields.io/badge/NEW-rebuttal%20support%20materials-22c55e?style=flat-square) We added supplementary materials on **Pure Architecture-Based Approach**  and **Cross-Family Merging**. Raw data available in : [`evaluation/rebuttal_supplement`](./evaluation/rebuttal_supplement/).
+
 ## Project Structure
 * `code/`: Core implementation of $TensorLock$.
 * `evaluation/`: Benchmark , Baseline and results of rq4-8.

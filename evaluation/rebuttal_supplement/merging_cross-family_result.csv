@@ -1,0 +1,16 @@
+Model ID,Type,Base Model,IPS,TPS
+nitus-ac/nMer3b,merge,"Undi95/Llama-3-LewdPlay-8B, ajibawa-2023/General-Stories-Mistral-7B",0.96,
+FallenMerick/Chunky-Lemon-Cookie-11B,merge,"SanjiWatsuki/Silicon-Maid-7B, KatyTheCutie/LemonadeRP-4.5.3, mistralai/Mistral-7B-v0.1, SanjiWatsuki/Kunoichi-7B, Sao10K/Fimbulvetr-11B-v2",,0.56
+mergekit-community/mergekit-slerp-ieauevl,merge,"yanolja/YanoljaNEXT-EEVE-Instruct-10.8B, beowolx/CodeNinja-1.0-OpenChat-7B",0.99,
+InnerI/InnerIAI-chat-7b-grok,merge,"InnerI/A-I-0xtom-7B-slerp, HuggingFaceH4/mistral-7b-grok",0.98,
+nbeerbower/Flammen-Trismegistus-7B,merge,"flammenai/flammen3X-mistral-7B, teknium/Mistral-Trismegistus-7B",0.99,
+nbeerbower/bruphin-delta,merge,"senseable/WestLake-7B-v2, nbeerbower/bruphin-gamma",0.99,
+automerger/OgnoExperiment27-7B,merge,"yam-peleg/Experiment27-7B, eren23/ogno-monarch-jaskier-merge-7b-OH-PREF-DPO-v2",0.99,
+mergekit-community/L3.1-Artemis-a-8B,merge,"Hastagaras/Jamet-8B-L3-MK.V-Blackroot, mergekit-community/L3-Boshima-a, Casual-Autopsy/L3-Umbral-Mind-RP-v3.0-8B, kromvault/L3.1-Ablaze-Vulca-v0.1-8B",,0.74
+v000000/SyntheticMoist-11B,merge,"Himitsui/Kaiju-11B, TheDrummer/Moistral-11B-v3, upstage/SOLAR-10.7B-v1.0, Himitsui/MedMitsu-Instruct-11B, migtissera/Synthia-v3.0-11B",,0.86
+jeiku/TestModel_7B,merge,"ChaoticNeutrals/Kool-Aid_7B, ChaoticNeutrals/Eris-Lelantacles-7b",0.99,
+snigdhachandan/ganeet-V3,merge,"WizardLMTeam/WizardMath-7B-V1.1, microsoft/rho-math-7b-interpreter-v0.1",0.99,
+appvoid/palmer-merge-test-x,merge,"raidhon/coven_tiny_1.1b_32k_orpo_alpha, microsoft/rho-math-1b-interpreter-v0.1, appvoid/palmer-003, appvoid/palmer-002-32k",,0.58
+appvoid/new-1,merge,"appvoid/palmer-003, Josephgflowers/TinyLlama-Cinder-Tiny-Agent",0.99,
+Sumail/Eurus6,merge,"Legalaz/04-facebook-NN38, whizzzzkid/whizzzzkid_131_4",0.98,
+MysticFoxMagic/HeatherSpellGen3,merge,"MysticFoxMagic/HeatherSpell-7b, CultriX/MergeCeption-7B-v3",0.99,
